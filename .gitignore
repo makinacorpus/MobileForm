@@ -3,5 +3,9 @@
 .log
 Desktop.ini
 node_modules
-
 .venv
+
+# Prevent js bundle and compiled sass to be pushed
+src/mobileform.js
+src/mobileform-vendors.js
+src/mobileform.css
