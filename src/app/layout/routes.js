@@ -3,11 +3,12 @@
 var controller = require('./controllers');
 
 function layoutRoutes($stateProvider, $urlRouterProvider) {
+  console.log('layoutRoutes ok')
+
 	$urlRouterProvider.otherwise('/');
 
 	$stateProvider
 		.state('layout', {
-			abstract: true,
 			url: '/',
 			template: require('./templates/layout.html'),
 			controller: controller.LayoutController
