@@ -2,6 +2,7 @@
 
 var dependencies = [
   'mobileForm.layout',
+  'mobileForm.form',
 	// EXTERNAL STUFFS
 	'ui.router',
 	'ngResource'
@@ -16,3 +17,4 @@ require('ngResource');
 angular.module('mobileForm', dependencies);
 
 require('./layout');
+require('./form');
