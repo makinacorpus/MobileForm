@@ -3,7 +3,6 @@
 var controller = require('./controllers');
 
 function layoutRoutes($stateProvider, $urlRouterProvider) {
-	console.log('layoutRoutes ok')
 
 	$urlRouterProvider.otherwise('/');
 
@@ -21,7 +20,8 @@ function layoutRoutes($stateProvider, $urlRouterProvider) {
 					template: require('./templates/header.html')
 				},
 				'content' : {
-					template: require('./templates/content.html')
+					template: require('./templates/content.html'),
+					controller: controller.FormController
 				}
 			}
 		});
