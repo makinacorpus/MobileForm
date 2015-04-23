@@ -1,32 +1,41 @@
 'use strict';
 
-function FormController($scope, $http) {
-$scope.data = '{\n'
-            +'    "description": "A list of my stuff to do",\n'
-            +'    "fields": [\n'
-            +'        {\n'
-            +'            "label": "The item",\n'
-            +'            "name": "item",\n'
-            +'            "type": "string"\n'
-            +'        },\n'
-            +'        {\n'
-            +'            "choices": [\n'
-            +'                "done",\n'
-            +'                "todo"\n'
-            +'            ],\n'
-            +'            "label": "is it done or not",\n'
-            +'            "name": "status",\n'
-            +'            "type": "enum"\n'
-            +'        }\n'
-            +'    ],\n'
-            +'    "title": "todo"\n'
-            +'}';
+function FormController($scope, $http, daybedService) {
+	// Default value
+	$scope.url = 'http://localhost:8000/v1/models/test';
 
-	$scope.send = function() {
-		$http.put('http://localhost:8000/v1/models/test', angular.copy($scope.data)).
-			error(function(data, status, headers, config) {
-				console.log(status);
-			});
+	$scope.get = function(){
+		daybedService.get($scope.url).then(
+			function(greeting){
+				console.log(greeting);
+				$scope.data = JSON.stringify(greeting,null,"  "); // Formatting and indentation
+			},
+			function(reason){
+				console.error(reason);
+			}
+		);
+	};
+
+	$scope.send = function(){
+		daybedService.put($scope.url,$scope.data).then(
+			function(greeting){
+				console.log(greeting);
+			},
+			function(reason){
+				console.error(reason);
+			}
+		);
+	}
+
+	$scope.delete = function(){
+		daybedService.del($scope.url).then(
+			function(greeting){
+				console.log(greeting);
+			},
+			function(reason){
+				console.error(reason);
+			}
+		);
 	}
 }
 
