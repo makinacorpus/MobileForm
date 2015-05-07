@@ -1,0 +1,49 @@
+{
+	"site": {
+		"name": "Mobile Form"
+	},
+	"resourcetypes": {
+		"urlPrefix": "http://localhost:8000/v1",
+		"urlRTypesList": "models",
+		"id": "models",
+		"attribute": "records",
+		"items": {}
+	},
+	"schemas": {
+		"schema1": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string",
+					"minLength": 2,
+					"title": "Id",
+					"description": "Id or alias"
+				},
+				"title": {
+					"type": "string",
+					"title": "Title",
+					"description": "Longer version"
+				}
+			}
+		}
+	},
+	"forms": {
+		"form1": [
+			"*",
+			{
+				"type": "submit",
+				"title": "Save"
+			}
+		]
+	},
+	"navMenus": {
+		"root": [
+			{
+				"id": "site",
+				"label": "Home",
+				"state": "site",
+				"priority": 1
+			}
+		]
+	}
+}

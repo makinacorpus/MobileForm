@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="mobileform">
+	<head>
+		<meta charset="utf-8">
+		<title ng-bind="layout.pageTitle">Some Title</title>
+		<link type="text/css" rel="stylesheet" media="all" href="/moondash.css">
+	</head>
+	<body md-init="/siteconfig.json">
+		<div ui-view></div>
+
+		<script src="/moondash-vendors.js"></script>
+		<script src="/moondash.js"></script>
+		<script src="/mobileform.js"></script>
+	</body>
+</html>
