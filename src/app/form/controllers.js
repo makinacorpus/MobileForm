@@ -1,6 +1,6 @@
 'use strict';
 
-function FormController($scope, daybedService, Restangular) {
+function FormController($scope, daybedService) {
 	// Default value
 	$scope.url = 'http://localhost:8000/v1/models/test1';
 

@@ -1,8 +1,6 @@
 'use strict';
 
-var angular = require('angular');
-
-angular.module('mf.form', ['restangular'])
+angular.module('mf.form', [])
 	.controller('FormController', require('./controllers').FormController)
-	.directive('jsonConsole', require('./directives').formDirective)
+	.directive('jsonConsole', require('./directives').jsonConsole)
 	.run(require('./formMenu').formMenu);

@@ -2,7 +2,7 @@
 
 var controller = require('./controllers');
 
-function formDirective() {
+function jsonConsole() {
 	return {
 		restrict: 'E', // only matches element name, not attribute name or class name
 		replace: true,
@@ -12,5 +12,5 @@ function formDirective() {
 }
 
 module.exports = {
-	formDirective: formDirective
+	jsonConsole: jsonConsole
 };

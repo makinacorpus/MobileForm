@@ -37,7 +37,7 @@ gulp.task('browserify', function (callback) {
                                      // Add file extentions to make optional in your requires
                                      extensions: config.extensions,
                                      // exclude all externals
-                                     bundleExternal: false,
+                                     bundleExternal: true,
                                      // Enable source maps!
                                      debug: config.debug
                                  })
