@@ -1,8 +1,8 @@
 'use strict';
 
 var dependencies = [
-  'mobileForm.layout',
-  'mobileForm.form',
+	'mobileForm.layout',
+	'mobileForm.form',
 	// EXTERNAL STUFFS
 	'ui.router',
 	'ngResource'
